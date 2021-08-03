@@ -1,0 +1,309 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  text-align: center ;
+  font-family: sans-serif ;
+  color: white;
+}
+html {
+  direction: ltr;
+  user-select: none;
+  overflow: hidden;
+}
+body{
+  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#root{
+  overflow: hidden;
+}
+.signedout-div{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding:  0 0 30px 0;
+}
+.signedout-div > h1 > span{
+  color: #ffffa9;
+  animation: animate-welcomer-text 2s ease-out;
+  animation-iteration-count: infinite;
+}
+.signedout-div > div.forms-c{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.privacy input{
+  color: #000;
+  text-align: left;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  -webkit-appearance: default !important;
+  appearance: default !important;
+}
+.privacy {
+  color: #000;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 10px;
+}
+.privacy label{
+  color: #000;
+  text-align: left;
+  margin-left: 10px;
+}
+.privacy label a{
+  color: #000;
+  text-align: left;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.signedout-div > div.forms-c > form[data-name='SignIn'] {
+  border-radius: 20px;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 10px 20px;
+  margin-top: 10px ;
+  background: rgb(255, 255, 255);
+  box-shadow:  0 0 20px 6px #047e9c;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > span {
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+  font-size: 2rem;
+  color: #1a1a1a;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all .4s ease-out;
+  z-index: 0;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > span.animated{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > input[type='email']{
+  margin: 10px 0 10px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 2.5vh;
+  min-height: 6vh;
+  border: 3px solid #047e9c;
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 10px;
+  transition: box-shadow .5s ease-out;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > input[type='email']:focus{
+  outline: none;
+  border: 2px solid #047e9c;
+  box-shadow:  0 0 20px 1px #d8d400;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > input[type='password']{
+  margin: 10px 0 10px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 2.5vh;
+  min-height: 6vh;
+  border: 3px solid #047e9c;
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 10px;
+  transition: box-shadow .5s ease-out;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn']> input[type='password']:focus{
+  outline: none;
+  border: 2px solid #047e9c;
+  box-shadow:  0 0 20px 1px #d8d400;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > button[type='submit']{
+  margin: 10px 0 10px 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 2.5vh;
+  min-height: 6vh;
+  border: 3px solid #047e9c;
+  border-radius: 5px;
+  background: rgb(0, 117, 153);
+  padding-left: 10px;
+  transition: box-shadow .5s ease-out;
+  cursor: pointer;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > button[type='submit']:focus{
+  outline: none;
+  border: 2px solid #047e9c;
+  box-shadow:  0 0 20px 1px #d8d400;
+}
+
+.signedout-div > div.forms-c > form[data-name='SignIn'] > small {
+  color: #000;
+  text-align: left;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > small > button {
+  cursor: pointer;
+  appearance: none;
+  color: #000;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.signedout-div > div.forms-c > form[data-name='SignIn'] > small > span{
+  color: #000;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.signedout-div > div.forms-c > form[data-name=SignUp] {
+  border-radius: 10px;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 10px 20px;
+  margin-top: 10px ;
+  background: rgb(255, 255, 255);
+  box-shadow:  0 0 20px 6px #047e9c;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > span {
+  font-weight: 300;
+  margin: 10px 0 10px 0;
+  font-size: 2rem;
+  color: #1a1a1a;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > span > strong {
+  font-weight: 900;
+  margin: 10px 0 10px 0;
+  font-size: 2rem;
+  color: #e4d500;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > input[type='email']{
+  margin: 10px 0 10px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 2.5vh;
+  min-height: 6vh;
+  border: 3px solid #047e9c;
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 10px;
+  transition: box-shadow .5s ease-out;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > input[type='email']:focus{
+  outline: none;
+  border: 2px solid #047e9c;
+  box-shadow:  0 0 20px 1px #d8d400;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > input[type='password']{
+  margin: 10px 0 10px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 2.5vh;
+  min-height: 6vh;
+  border: 3px solid #047e9c;
+  border-radius: 5px;
+  text-align: left;
+  padding-left: 10px;
+  transition: box-shadow .5s ease-out;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > input[type='password']:focus{
+  outline: none;
+  border: 2px solid #047e9c;
+  box-shadow:  0 0 20px 1px #d8d400;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > button[type='submit']{
+  margin: 10px 0 10px 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 2.5vh;
+  min-height: 6vh;
+  border: 3px solid #047e9c;
+  border-radius: 5px;
+  background: rgb(0, 117, 153);
+  padding-left: 10px;
+  transition: box-shadow .5s ease-out;
+  cursor: pointer;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > button[type='submit']:focus{
+  outline: none;
+  border: 2px solid #047e9c;
+  box-shadow:  0 0 20px 1px #d8d400;
+}
+
+.signedout-div > div.forms-c > form[data-name=SignUp] > small {
+  color: #000;
+  text-align: left;
+  font-weight: 700;
+  margin: 10px 0px 10px 0px;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > small > button {
+  cursor: pointer;
+  appearance: none;
+  color: #000;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.signedout-div > div.forms-c > form[data-name=SignUp] > label {
+  color: #000;
+  text-align: left;
+  border: none;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+
+/* 
+
+
+
+//////////////////////////////////////////////////////////////////////////////    //////////////////
+ */
+
+
+
+
+
+
+
+
+
+
+::selection{
+  color: #047e9c;
+  background-color: rgba(129, 129, 129, 0.158);
+  border-radius: 10px;
+  padding-top: 333px;
+}
+input:not(.privacy input){
+  -webkit-appearance: none !important;
+}
+
+.i-element{
+
+}
+.i-element:hover .i-element::before{
+  content: attr( );
+}

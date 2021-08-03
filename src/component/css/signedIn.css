@@ -1,0 +1,476 @@
+.signedin-div{
+    min-height: 100%;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+.signedin-div > .search-bar {
+    position: relative;
+    height: 8%;
+    z-index: 4; 
+    box-shadow: 0px 20px 20px 0px #1c1c1c;
+}
+.signedin-div > .search-bar > input[type='text'] {
+    color: black;
+    box-shadow: 0 0 20px 1px;
+    font-size: x-large;
+    height: 100%;
+    width: 100vw;
+    padding: 10px 10px 10px 20px ;
+    text-align: left;
+    border: 5px solid #d4d240;
+    border-radius: 10px;
+    outline: none;
+}
+.signedin-div > .search-bar > input[type='text']:focus{
+    outline: none;
+    border: 5px solid #d4d240;
+}
+.signedin-div > .search-bar > [data-search-deleter]{
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 10%;
+    outline: none;
+    background: #05b0db;
+    border: none;
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.signedin-div > .Accounts {
+    height: calc(100% - (70px + 8%));
+    position: relative;
+    z-index: 5;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.signedin-div > .bottom-bar > .open-custom-search {
+    appearance: none;
+    -webkit-appearance: none;
+    text-shadow: 3px 7px 11px #000000;
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    background: #0000;
+    color: #a09733;
+    font-weight: 500;
+    border-radius: 5px;
+    display: inline-block;
+    height: 70px;
+    width: 80px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.signedin-div > .bottom-bar > .open-settings {
+    appearance: none;
+    -webkit-appearance: none;
+    text-shadow: 3px 7px 11px #000000;
+    text-align: center;
+    background: #0000;
+    color: #a09733;
+    font-weight: 500;
+    border-radius: 5px;
+    display: inline-block;
+    height: 70px;
+    width: 80px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.signedin-div > .bottom-bar{
+    /* background: linear-gradient(to right bottom, #287ca0, #287ca0, #961e56); */
+    background-color: rgb(34, 34, 34);
+    box-shadow: 0 0 20px 0px black;
+    height: 80px;
+    display: flex;
+    z-index: 6;
+}
+.signedin-div > .bottom-bar > .add-data-btn{
+    text-align: center;
+    font-size: -webkit-xxx-large;
+    background: #ffbf10;
+    color: #333;
+    font-weight: 500;
+    border-radius: 50%;
+    transform: translateY(-30%);
+    display: inline-block;
+    height: 70px;
+    width: 80px;
+    border: 1.5px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0px -12px 70px 0px #0b0b0b;
+    z-index: 6;
+}
+
+.customSearch{
+    background-color: #252525;
+    color: #000;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    z-index: 43;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    border: 2px solid #047e9c;
+    position: fixed;
+    opacity: 1;
+    animation: customSearch-opened .3s ease-in-out;
+}@keyframes customSearch-opened {
+    0%{
+        transform: translatex(5%);
+        opacity: 0;
+    }
+}
+.customSearch > span {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #e2e2e2;
+    cursor: pointer;
+}
+.customSearch > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+.customSearch > div > select{
+    cursor: pointer;
+    appearance: none;
+    background: #dadada;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    color: #000;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline: none;
+    border: 3px solid #000;
+    margin: 0 10px;
+    font-weight: 600;
+}
+.customSearch > div > select:nth-child(1){
+    margin-bottom: 10px;
+}
+.customSearch > div >  select > option{
+    color: black;
+    font-weight: 700;
+}
+.customSearch > button{
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: inset 0px 0px 6px 0px black;
+    height: 10%;
+    width: 100%;
+    outline: none;
+    background: #bd2020;
+    border: none;
+    font-weight: 900;
+    border-radius: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 auto;
+    color: #f1f1f1;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+.add-account-form{
+    background-color: #252525;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    z-index: 43;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    border: 2px solid #047e9c;
+    position: fixed;
+    overflow-y: auto;
+    animation: addAcount-opened .3s ease-in-out;
+}@keyframes addAcount-opened {
+    0%{
+    transform: translateY(5%);
+        opacity: 0;
+    }
+}
+.add-account-form > span {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #e2e2e2;
+    cursor: pointer;
+}
+.add-account-form > input{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 10px auto ;
+}
+.add-account-form > select{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 10px auto ;
+}
+.add-account-form > input[placeholder='Email, phone or userName...']{
+    padding: 15px;
+    font-size: large;
+    color: #000;
+    background: #fff;
+    outline: none;
+    border: 9px solid #d4d240;
+    border-radius: 10px;
+    text-align: left;
+}
+.add-account-form > input[placeholder='Email, phone or userName...']::placeholder{
+    color: #000;
+    opacity: .7;
+}
+.add-account-form > input[placeholder='password...']{
+    padding: 15px;
+    font-size: large;
+    color: #000;
+    background: #fff;
+    outline: none;
+    border: 9px solid #d4d240;
+    border-radius: 10px;
+    text-align: left;
+}
+.add-account-form > input[placeholder='password...']::placeholder{
+    color: #000;
+    opacity: .7;
+}
+.add-account-form > input[placeholder='password Again...']{
+    padding: 15px;
+    font-size: large;
+    color: #000;
+    background: #fff;
+    outline: none;
+    border: 9px solid #d4d240;
+    border-radius: 10px;
+    text-align: left;
+}
+.add-account-form > input[placeholder='password Again...']::placeholder{
+    color: #000;
+    opacity: .7;
+}
+.add-account-form > select{
+    padding: 15px;
+    font-size: large;
+    color: #000;
+    background: #fff;
+    outline: none;
+    border: 9px solid #d4d240;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.add-account-form > select::placeholder{
+    color: #000;
+    opacity: .7;
+}
+.add-account-form > input[data-custome-based-on]{
+    padding: 15px;
+    font-size: large;
+    color: #000;
+    background: #fff;
+    outline: none;
+    border: 9px solid #d4d240;
+    border-radius: 10px;
+    text-align: left;
+    cursor:text;
+}
+.add-account-form > input[data-custome-based-on]::placeholder{
+    color: #000;
+    opacity: .7;
+}
+
+.add-account-form option{
+    color: black;
+}
+.add-account-form > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 5px;
+    flex-grow: 0;
+}
+.add-account-form > div > [type='submit']{
+    color: #000;
+    background: #6be16b;
+    flex-grow: 3;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.add-account-form > div > [type='reset']{
+    color: #000;
+    background: #ff3c00;
+    flex-grow: 1;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/* 
+//  Account-div
+Account-div
+Account-div
+Account-div
+Account-div
+*/
+.Account-div{
+    width: 95vw;    
+    background: #333333;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset -1px -1px 0px 1px #047e90;
+    cursor: pointer;
+    z-index: 4 ;
+    padding: 20px 0;
+}
+.Account-div > span{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Account-div > span > span:nth-child(1){
+    flex-basis: 100%;
+}
+.Account-div > span > span:not(span:nth-child(1)){
+    color: #c3c3c3 ;
+}
+.Account-div > div > *{
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+}
+.account-detail{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(43, 41, 41, 0.01);
+    z-index: 111;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+.account-detail  > div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    animation: account-detail-animat 0.2s ease-in-out;
+}
+.account-detail > div > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+.account-detail > div > div > label {
+    margin-left: 10%;
+}
+.account-detail > div > div > div {
+    position: relative;
+    margin: 0 auto;
+}
+.account-detail > div > div > div > input{
+    padding: 20px 5px 20px 10px ; 
+    text-align: start;
+    border: none;
+    box-shadow: inset -1px -1px 0px 1px #047e90;
+    border-radius: 5px;
+    max-width: 70vw;
+    min-width: 50vw;
+    background: #595959;
+    font-size:xx-large;
+    touch-action: none;
+}
+.account-detail > div > div > div > label{
+    position: absolute;
+    right: 0 ;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+@keyframes account-detail-animat {
+    0%{
+        opacity: 0.5;
+    }
+}
+.account-detail > div > div > div > label > i{
+    padding: 10px 15px;
+    background: #fbfbfb;
+    border-radius: .25rem;
+    margin: 0 10px 0 0;
+}
+.account-detail > span {
+    font-size:30px;
+    position: absolute;
+    right: 8%;
+    top: 2%;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}

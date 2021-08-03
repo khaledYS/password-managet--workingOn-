@@ -1,0 +1,49 @@
+
+
+
+.sign-switcher{
+    width: 40%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: stretch;
+    position: relative;
+    border-radius: 10px;
+    color: #000;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  }
+  .sign-switcher button[value]{
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 50%;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+    color: #000;
+    font-family: Arial;
+    font-weight: 900;
+  }
+  
+  .sign-switcher button:not([value]){
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.315);
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    border: none;
+    outline: none;
+    margin-left:4px ;
+    border-radius: 20px;
+    color: #000;
+    transition: left .5s ease-out;
+    box-shadow: rgb(0 0 0) 0px 0px 3em 7px;
+  }
+  
+  
+  
